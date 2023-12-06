@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  conversao:
+    container_name: conversao
+
+    image: pestana1984/conversao:${tag}
+    build:
+      dockerfile: ./Dockerfile
+      context: ./src
+    
+    ports:
+      - 8081:8080
